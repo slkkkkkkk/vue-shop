@@ -1,19 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  <p>123</p>
-  <p>123</p>
+  <router-link to="/login">登录</router-link>
+  <router-link to="/main">主页</router-link>
+  <p>{{ $store.state.name }}</p>
+  <div class="rounded-3xl bg-dark-300" style="width: 200px;height: 200px;"></div>
+  <router-view></router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {}
 })
 </script>
 
@@ -26,4 +24,7 @@ export default defineComponent({
   color: #2c3e50;
   margin-top: 60px;
 }
+// .rounded-3xl {
+//   border-radius: 1.5rem;
+// }
 </style>
